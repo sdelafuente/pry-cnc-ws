@@ -1,11 +1,22 @@
-<div class="">
+
+
     <h2>Lista de Paises</h2>
-    <ul>
-        <li *ngFor="let pais of arrayPaises" >
-             {{pais.name}} - {{pais.alpha2Code}} - {{pais.capital}}
-        </li>
-        <li *ngFor="let err of error" >
-             "Status: " {{err.status}} - "Mensaje: "{{err.statusText}}
-        </li>
-    </ul>
-</div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>PAIS</th>
+          <th>CODIGO</th>
+          <th>CAPITAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pais of arrayPaises" >
+             <td>{{pais.name}}</td>
+             <td>{{pais.alpha2Code}}</td>
+             <td>{{pais.capital}}</td>
+        </tr>
+        <tr *ngFor="let err of error" >
+             <td colspan="3">"Status: " {{err.status}} - "Mensaje: "{{err.statusText}}</td>
+        </tr>
+    </tbody>
+    </table>

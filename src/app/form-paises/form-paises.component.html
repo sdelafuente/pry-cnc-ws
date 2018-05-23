@@ -1,7 +1,11 @@
-<div class="envDato">
-    <button name="buscar_todos" (click)="BuscarTodos();">Todos</button>
-    <br>
-    <input type="text" #nombre placeholder="Pais">
-    <br>
-    <button name="buscar" (click)="Buscar(nombre.value);">Buscar</button>
-</div>
+<form class="form-inline">
+    <div class="form-group mb-2">
+        <label for="buscar_todos" class="sr-only">Email</label>
+        <button type="button" class="btn btn-secondary" name="buscar_todos" id="buscar_todos" (click)="BuscarTodos();">Paises</button>
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="nombre" class="sr-only">Password</label>
+        <input type="text" class="form-control" id="nombre" #nombre placeholder="Buscar un pais">
+    </div>
+    <button type="button" name="buscar" class="btn btn-primary mb-2" (click)="Buscar(nombre.value);">Ir</button>
+</form>
