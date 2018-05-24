@@ -1,17 +1,29 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-    <div style="text-align:center" class="jumbotron">
-        <h1>Servicios</h1>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="row">
-        <div class="col-md-12 rounded bg-danger" style="padding-top:15px;padding-bottom:10px;">
-            <app-form-paises (enviarError)="Datos($event,0)" (enviarPaises)="Datos($event,1)" ></app-form-paises>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="">Bienvenida <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="paises">Paises</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="mapa">Maps</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+      </ul>
     </div>
-    <div class="row">
-        <div class="col-md-12 rounded bg-secondary"  style="padding-top:20px;">
-            <app-listar-paises [error]="arrError" [arrayPaises]="arrPaises"  ></app-listar-paises>
-        </div>
-    </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+    <!--agm-map >
+      <agm-marker ></agm-marker>
+  </agm-map-->
 </div>

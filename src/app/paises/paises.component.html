@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+    <div class="row">
+        <div class="col-md-12 rounded bg-danger" style="padding-top:15px;padding-bottom:10px;">
+            <app-form-paises (enviarError)="Datos($event,0)" (enviarPaises)="Datos($event,1)" ></app-form-paises>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 rounded bg-secondary"  style="padding-top:20px;">
+            <app-listar-paises [error]="arrError" [arrayPaises]="arrPaises"  ></app-listar-paises>
+        </div>
+    </div>
